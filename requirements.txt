@@ -1,6 +1,6 @@
 matplotlib
 scikit-learn
-protobuf==3.20.0
+protobuf
 fer
 librosa
 plotly
