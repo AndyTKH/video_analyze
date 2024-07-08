@@ -14,6 +14,8 @@ import tempfile
 import glob
 import os
 from pathlib import Path
+from PIL import Image
+
 
 # Define functions
 def vidtoaudio(filename, output_name):
