@@ -41,9 +41,9 @@ def load_audio_features(mp3file):
 
 
 @st.cache_data(show_spinner=False)
-def predict_flu(mp3file, svm_clf): 
+def predict_flu(mp3file, _svm_clf): 
     features = load_audio_features(mp3file)
-    return svm_clf.predict(features)
+    return _svm_clf.predict(features)
 
 
 def visualize(l2, dd):
