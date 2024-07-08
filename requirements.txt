@@ -1,0 +1,8 @@
+matplotlib
+scikit-learn
+protobuf==3.20.0
+fer
+librosa
+plotly
+moviepy
+streamlit
