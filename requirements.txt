@@ -5,5 +5,5 @@ fer
 librosa
 plotly
 moviepy
-tensorflow==2.11.0
+tensorflow==2.11
 streamlit
