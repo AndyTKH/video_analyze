@@ -5,4 +5,5 @@ fer
 librosa
 plotly
 moviepy
+tensorflow
 streamlit
