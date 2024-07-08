@@ -87,11 +87,17 @@ def reencode_video_moviepy(input_path, output_path):
         st.error(f"An error occurred during re-encoding: {e}")
 
 
+feat_path = Path(__file__).parent / 'feat.npy'
+label_path = Path(__file__).parent / 'label.npy'
 
 
 # Load pre-trained SVM model
-X = np.load('feat.npy')
-y = np.load('label.npy').ravel()
+#X = np.load('feat.npy')
+#y = np.load('label.npy').ravel()
+
+X = np.load(feat_path)
+y = np.load(label_path).ravel()
+
 
 np.random.seed(7)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=30)
@@ -116,10 +122,10 @@ col1.write("Analysis of Rishi Sunak's Speech:")
 col2.write("Analysis of Your Speech:")
 
 with col1:
-
-    st.image("pic/face.png", use_column_width=True)
-    st.image("pic/emo.png", use_column_width=True)
-    st.image("pic/flu.png", use_column_width=True)
+    
+    st.image(Path(__file__).parent / 'pic/face.png', use_column_width=True)
+    st.image(Path(__file__).parent / 'pic/emo.png', use_column_width=True)
+    st.image(Path(__file__).parent / 'pic/flu.png', use_column_width=True)
 
 
 with col2:
