@@ -13,7 +13,7 @@ import base64
 import tempfile
 import glob
 import os
-
+from pathlib import Path
 
 # Define functions
 def vidtoaudio(filename, output_name):
