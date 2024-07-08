@@ -121,11 +121,27 @@ col1, col2 = st.columns([2, 2])
 col1.write("Analysis of Rishi Sunak's Speech:")
 col2.write("Analysis of Your Speech:")
 
+# Define the image paths
+face_img_path = Path(__file__).parent / 'pic/face.png'
+emo_img_path = Path(__file__).parent / 'pic/emo.png'
+flu_img_path = Path(__file__).parent / 'pic/flu.png'
+
 with col1:
+    # Open and display face image
+    with face_img_path.open('rb') as face_file:
+        face_img = Image.open(face_file)
+        st.image(face_img, use_column_width=True)
     
-    st.image(Path(__file__).parent / 'pic/face.png', use_column_width=True)
-    st.image(Path(__file__).parent / 'pic/emo.png', use_column_width=True)
-    st.image(Path(__file__).parent / 'pic/flu.png', use_column_width=True)
+    # Open and display emotion image
+    with emo_img_path.open('rb') as emo_file:
+        emo_img = Image.open(emo_file)
+        st.image(emo_img, use_column_width=True)
+
+    # Open and display fluency image
+    with flu_img_path.open('rb') as flu_file:
+        flu_img = Image.open(flu_file)
+        st.image(flu_img, use_column_width=True)
+
 
 
 with col2:
