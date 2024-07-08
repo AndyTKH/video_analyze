@@ -165,11 +165,11 @@ with col2:
         y_predict = predict_flu(temp_audio_path, svm_clf)
 
         if y_predict == 0:
-            visualize([{'range': [0, 1], 'color': 'red'}], {'text': "English Fluency on Beginner level", 'font': {'size': 10}})
+            visualize([{'range': [0, 1], 'color': 'red'}], {'text': "English Fluency on Beginner level", 'font': {'size': 15}})
         elif y_predict == 1:
-            visualize([{'range': [0, 1], 'color': 'red'}, {'range': [1, 2], 'color': 'yellow'}], {'text': "English Fluency on Intermediate level", 'font': {'size': 10}})
+            visualize([{'range': [0, 1], 'color': 'red'}, {'range': [1, 2], 'color': 'yellow'}], {'text': "English Fluency on Intermediate level", 'font': {'size': 15}})
         else:
-            visualize([{'range': [0, 1], 'color': 'red'}, {'range': [1, 2], 'color': 'yellow'}, {'range': [2, 3], 'color': 'green'}], {'text': "English Fluency on Advanced level", 'font': {'size': 10}})
+            visualize([{'range': [0, 1], 'color': 'red'}, {'range': [1, 2], 'color': 'yellow'}, {'range': [2, 3], 'color': 'green'}], {'text': "English Fluency on Advanced level", 'font': {'size': 15}})
 
         # Analyze emotions
         analyze_emotions(temp_video_path)
