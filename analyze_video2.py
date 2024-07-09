@@ -16,6 +16,9 @@ import os
 from pathlib import Path
 from PIL import Image
 
+def wide_space_default():
+    st.set_page_config(layout=“wide”)
+wide_space_default
 
 # Define functions
 def vidtoaudio(filename, output_name):
