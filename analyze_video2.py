@@ -74,7 +74,7 @@ def analyze_emotions(videofile):
     for i in df.columns:
         per.append(df[i].sum() / (df.sum().sum()) * 100)
 
-    label = ['angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral']
+    label = ['Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral']
     plt.barh(label, per, color=['red', 'pink', 'orange', 'cyan', 'lime', 'yellow', 'gray'])
     plt.title('Emotion Chart')
     plt.ylabel('')
@@ -117,7 +117,7 @@ def load_model_and_data():
 svm_clf = load_model_and_data()
 
 # Streamlit app
-st.title("MP4 Video Analyzer")
+st.title("Speech Analyzer")
 
 # Add file uploader to sidebar
 st.sidebar.header("Upload Video")
